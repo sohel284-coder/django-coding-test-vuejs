@@ -83,5 +83,15 @@
 
 <script type="text/javascript" src="{% static '/js/chunk-vendors.js' %}"></script>
 <script type="text/javascript" src="{% static '/js/app.js' %}"></script>
+
+{% if debug %}
+<script type="text/javascript" src="{% static '/js/vue.js' %}"></script>
+{% else %}
+<script type="text/javascript" src="{% static '/js/vue.min.js' %}"></script>
+{% endif %}
+
+{% block script %} {% endblock script %}
+
+
 </body>
 </html>

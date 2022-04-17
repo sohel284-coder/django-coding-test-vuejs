@@ -24,7 +24,8 @@ from config import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('authentication.urls')),
-    path('product/', include('product.urls'))
+    path('product/', include('product.urls')),
+    path('api/', include('product.api.urls')),
 ]
 
 if settings.DEBUG:
